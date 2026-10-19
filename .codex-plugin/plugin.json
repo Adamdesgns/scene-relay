@@ -1,0 +1,8 @@
+{
+  "name": "scene-relay",
+  "version": "0.1.1",
+  "description": "Free personal local video workflow by @adamdesgns. Existing Claude access and local render tools required.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {"displayName": "Scene Relay", "shortDescription": "Brief. Build. Revise. Render.", "developerName": "Adam Designs"}
+}

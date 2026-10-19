@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "product": "Scene Relay",
+  "creator": "@adamdesgns",
+  "version": "0.1.1",
+  "verified_date": "2026-10-19",
+  "status": "offline_isolated_mcp_and_live_smoke_checks_passed",
+  "distribution": {
+    "file": "scene-relay-plugin-0.1.1.zip",
+    "sha256": "0102e9fe0bc84ca36b782c23b6b0c2e6b116334cf3c7bda035a942b9d6d78c36",
+    "bytes": 94023,
+    "files": 34,
+    "scope": "plugin_source_only",
+    "unchanged_after_live_test": true,
+    "documentation_note": "The exact tested ZIP retains its earlier documentation. Repository documentation and release notes add the subsequent live smoke-test evidence; the ZIP was not repackaged."
+  },
+  "source_suite": {"tests_run": 148, "passed": 146, "skipped": 2, "seconds": 92.55},
+  "exact_archive_suite": {"tests_run": 148, "passed": 146, "skipped": 2, "seconds": 95.466},
+  "skip_reasons": ["Windows user could not create the two symlink test fixtures"],
+  "isolated_mcp": {"initialize": "passed", "tool_count": 6, "health": "passed", "native_desktop_installation": false},
+  "live_smoke": {
+    "status": "passed",
+    "author_jobs": 1,
+    "render_jobs": 1,
+    "automatic_retries": 0,
+    "claude_code_version": "2.1.301",
+    "requested_model": "claude-opus-5-5",
+    "observed_model": "claude-opus-5-5",
+    "model_verified": true,
+    "model_evidence": {
+      "initialization_observed": true,
+      "assistant_observations": 4,
+      "final_usage_observed": true,
+      "mismatch": false,
+      "invalid": false,
+      "incomplete": false
+    },
+    "authentication": {"method": "claude.ai", "provider": "firstParty", "plan_tested": "Max", "route_verified": true, "api_overrides_present": false, "provider_or_model_fallback": false},
+    "bounds": {"wall_timeout_seconds": 300, "max_turns": 6, "actual_turns": 3},
+    "media": {"duration_seconds": 3, "width": 1920, "height": 1080, "fps": 30, "video_codec": "h264", "audio_codec": "aac", "audio_channels": 2, "bytes": 60649},
+    "renderer": {"hyperframes_version": "0.8.169", "workers": 1, "downloads": false},
+    "checks": {"hyperframes_check": "passed", "full_video_audio_decode": "passed", "sampled_frame_review": "passed", "human_listening_review": "not_performed"},
+    "nonblocking_warnings": ["studio_missing_editable_id", "nested_structure_needs_subcomposition"]
+  },
+  "review": {"source_only_inventory": "passed", "exact_archive_integrity": "passed", "personal_path_and_secret_scan": "passed", "independent_code_review": "no_concrete_blocker_found"},
+  "requirements": [
+    "Existing eligible Claude subscription with access to the requested model, signed in through the official Claude Code CLI; model entitlement and plan limits are account-specific.",
+    "Use require_existing_claude_login=true for the tested personal-subscription workflow. No API key setup is needed for that workflow.",
+    "Python 3.11+, Node 22+, HyperFrames 0.8.169, an installed compatible Chromium browser, FFmpeg and ffprobe.",
+    "Explicit short writable Windows data root of at most 120 UTF-16 code units; local reviewed seed assets are supplied separately."
+  ],
+  "limitations": [
+    "Native Codex desktop installation, host placeholder expansion, fresh-machine setup, other operating systems and other CLI/authentication routes remain untested.",
+    "This is one bounded Windows live smoke test; it does not guarantee model availability or success for other users or jobs.",
+    "Free plugin source does not mean free inference. Subscription allowances, rate limits and any enabled extra usage remain subject to the user's plan. CLI cost estimates are not invoices.",
+    "Model verification occurs after execution and cannot reverse inference or charges already incurred.",
+    "The ZIP includes no provider executables, browser, renderer, production assets, private prompts, job logs, credentials or smoke-job artifacts."
+  ],
+  "license": "Existing MIT license for plugin source; third-party software and media retain their own licenses."
+}

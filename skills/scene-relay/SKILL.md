@@ -1,0 +1,26 @@
+---
+name: scene-relay
+description: Create or revise editable launch videos using the user's own locally installed Claude Code and a controlled local HyperFrames renderer. Use when the user wants Codex to direct a video through Claude Code or invokes Scene Relay.
+---
+
+# Scene Relay 0.1.1 - by @adamdesgns
+
+Scene Relay is a free local workflow. Claude access, Codex access, Python, Node, HyperFrames, a local browser and FFmpeg are separate prerequisites. Keep the official Claude CLI unmodified and let it handle its own authentication.
+
+1. Call `scene_relay_health` before the first job. It checks dependency presence; do not treat it as proof of browser compatibility, authentication, model access, or a complete workflow. Explain missing prerequisites or authentication/billing uncertainty. Do not install, log in, change credentials or switch providers without authorization. For direct local execution, explicitly choose a short writable `--data-root` within the user's approved scope and a reviewed seed directory; see the README examples. Never change system long-path settings or move existing jobs automatically.
+2. Translate the user's video request into one bounded brief: audience, truthful claims, duration, dimensions, readable copy, assets and exact deliverables. Respect the user's existing approval scope. A technical capability request alone is not authorization to run a model or render.
+3. Call `start_video_job` only for the authorized brief. Use an explicit full model identifier, such as `claude-opus-5-5`, for the requested model. Do not substitute an alias or another model. Set `require_existing_claude_login: true` when the user authorized their existing personal login. This is a per-job constraint, not a product-wide subscription requirement; preserve official authentication alternatives for deliberately authorized, supported configurations. Do not silently fall back to an API or other model.
+4. Poll `get_video_job` at reasonable intervals. The returned job ID is the durable handle. A timeout or delayed response is not permission to submit a duplicate job. Read sanitized progress; do not expose private prompts or raw transcripts. Version 0.1.1 requires valid initialization and final model-usage evidence, with exact matching identifiers and no alias normalization. Treat `model_mismatch` and model-observation errors as failed authoring; do not claim completion or retry automatically. Verification happens after execution and cannot reverse incurred usage. The stream contract targets CLI 2.1.301; other versions/providers are unverified.
+5. Inspect returned source and use the applicable video skills. Every demonstrated success must come from actual recorded evidence. Keep fonts/media local and include a rights ledger. For revisions, pass the prior job ID in `seed_job_ids`, preserving the prior take.
+6. After source review and within the user's render authorization, call `render_video_job`. This renderer checks the composition, uses one render slot, then verifies the actual MP4 and audio. Review playback and representative frames before describing quality; technical verification alone is not a visual or listening review.
+7. Deliver the finished video, editable project, preview, and relevant verification evidence. Say what was not verified. The 40-second demonstration belongs to v0.1.0; do not present it as a v0.1.1 live run or proof of fresh-host installation. A later exact-package v0.1.1 three-second smoke test is documented separately in `docs/RELEASE-0.1.1.md`; it does not establish native installation or another user's account access. Publication, account changes, and persistent installation remain separate actions unless already authorized.
+
+Use `cancel_video_job` only when the user requests cancellation or a previously agreed job limit requires it. It targets the selected Scene Relay job only. Unrelated apps and jobs must remain untouched.
+
+With an execution host that ends descendants when a command returns, use `scripts/run_job.py` to keep the approved invocation open while it monitors the asynchronous job. Do not use detachment to bypass the host's process-lifetime policy. Keep portable `${PLUGIN_ROOT}` and `${PLUGIN_DATA}` placeholders in package manifests; host integration and persistent installation are not verified by offline tests.
+
+For the tested HyperFrames 0.8.169 renderer, register the real paused timeline in an inline HTML script. If an external scene script constructs it, export that timeline and register it immediately afterward in script order. This version's static check does not discover registration inside external JavaScript. Use the delivered editable project as a trusted seed, or supply another reviewed local template with its assets.
+
+A failed render can seed a separate repair job when successful authoring and its source were retained. Preserve that failed attempt; never present it as a successful render.
+
+If quota, permissions, billing-route checks or dependencies block a job, report the exact stage and reason. Do not weaken the restrictions or retry automatically. See `docs/AUTHENTICATION.md` for personal-use and distribution considerations. No Anthropic or OpenAI endorsement is claimed.

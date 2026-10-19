@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scene-relay",
+  "version": "0.1.1",
+  "description": "Direct editable launch videos through your locally installed Claude Code, with bounded jobs and a separate local renderer.",
+  "author": {"name": "Adam Designs", "url": "https://x.com/adamdesgns"},
+  "license": "MIT",
+  "keywords": ["video", "local", "launch", "claude-code", "hyperframes"]
+}

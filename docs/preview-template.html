@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Scene Relay — local film review</title>
+  <style>
+    :root{--paper:#f3efe4;--ink:#171a17;--muted:#575b51;--lime:#d6f25f;--line:#c9c9bb;--panel:#e8e5da}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    a{color:inherit;text-underline-offset:.22em}a:focus-visible,video:focus-visible{outline:3px solid var(--ink);outline-offset:5px}
+    .wrap{width:min(1160px,calc(100% - 48px));margin:auto}header{border-bottom:1px solid var(--line);padding:26px 0}.mast{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .wordmark{font-size:25px;font-weight:800;letter-spacing:-.05em;text-decoration:none}.tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:7px 11px;border:1px solid var(--ink)}
+    main{padding:62px 0 72px}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin:0 0 16px}.eyebrow span{background:var(--lime);padding:5px 9px}
+    h1{font-size:clamp(42px,6vw,76px);letter-spacing:-.055em;line-height:1.04;max-width:900px;margin:0 0 24px;font-weight:800}h2{font-size:27px;letter-spacing:-.035em;line-height:1.2;margin:0 0 16px}h3{font-size:17px;margin:0 0 9px}
+    .intro{max-width:740px;color:var(--muted);font-size:19px;margin:0 0 28px}.notice{margin:0 0 25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}.notice strong{margin-right:8px}
+    .player{background:var(--ink);border:1px solid var(--ink);border-radius:4px;overflow:hidden}video{width:100%;display:block;aspect-ratio:16/9;background:var(--ink)}
+    .caption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 52px}.button{display:inline-block;padding:12px 18px;border:1px solid var(--ink);font-weight:700;font-size:14px;text-decoration:none;border-radius:3px}.button.primary{background:var(--lime)}.button:hover{background:var(--ink);color:var(--paper)}
+    .section{padding:32px 0;border-top:1px solid var(--line)}.section p{max-width:800px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:42px}.figure{margin:24px 0 0;padding:0}.figure img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--panel);min-height:100px}.figure figcaption{font-size:13px;color:var(--muted);margin:10px 0}
+    table{width:100%;border-collapse:collapse;font-size:15px}caption{text-align:left;font-size:14px;color:var(--muted);margin-bottom:16px}th,td{padding:15px 12px 15px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-weight:700}td:nth-child(2){width:180px}.pending{display:inline-block;border:1px solid #989e82;padding:3px 8px;background:#e8ebdc;font-size:12px;font-weight:700;white-space:nowrap}.detail{color:var(--muted);font-size:14px}
+    .steps{padding-left:20px;margin:0}.steps li{padding:4px 0 10px}footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.credit{color:var(--ink);font-weight:700}
+    @media(max-width:700px){.wrap{width:calc(100% - 32px)}main{padding-top:40px}.grid{grid-template-columns:1fr;gap:26px}table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{padding:15px 0;border-bottom:1px solid var(--line)}th,td{border:0;padding:4px 0}td:nth-child(2){width:auto}.actions{margin-bottom:35px}.intro{font-size:17px}.tag{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<!-- Packaging contract: copy this template into the delivery directory, then replace
+     only the file links, display metadata and capability result cells with verified
+     values from the actual final report. Unreplaced content is intentionally pending.
+     Relative files expected beside the packaged page: final.mp4, poster.jpg,
+     contact-sheet.jpg, editable-project.zip, scene-relay-plugin.zip, test-evidence.json.
+     No scripts, analytics, external fonts, network requests or auto-play. -->
+<header><div class="wrap mast"><a class="wordmark" href="#top">Scene Relay</a><span class="tag">Local review · not published</span></div></header>
+<main id="top" class="wrap">
+  <p class="eyebrow"><span>Free plug-in for Codex</span></p>
+  <h1>Your brief.<br>A launch film.</h1>
+  <p class="intro">Codex directs the brief. Claude Code authors editable scenes. A local renderer makes the film. This page holds the launch sample and the evidence behind it.</p>
+  <p class="notice"><strong>Review package awaiting final verification.</strong> This template does not claim that the linked files exist or that any capability has passed. Replace this notice when the actual package is complete.</p>
+  <div class="player">
+    <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="Scene Relay launch film, local review copy">
+      <source src="final.mp4" type="video/mp4">
+      Your browser cannot play this MP4. <a href="final.mp4" download>Download the film</a> to review it locally.
+    </video>
+  </div>
+  <div class="caption"><span>Output: awaiting verified dimensions, frame rate, duration and audio result.</span><span>by @adamdesgns</span></div>
+  <nav class="actions" aria-label="Review package downloads">
+    <a class="button primary" href="final.mp4" download>Download MP4</a>
+    <a class="button" href="editable-project.zip" download>Editable project</a>
+    <a class="button" href="scene-relay-plugin.zip" download>Local plug-in package</a>
+    <a class="button" href="test-evidence.json" download>Test evidence</a>
+  </nav>
+  <section class="section" aria-labelledby="proof-title">
+    <h2 id="proof-title">What was tested</h2>
+    <table>
+      <caption>Results must come from the actual run. “Awaiting evidence” means no completed result is claimed here.</caption>
+      <thead><tr><th scope="col">Capability</th><th scope="col">Result</th><th scope="col">Supporting evidence</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Official Claude Code authoring</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">Record the successful job and observed model. A requested model is not proof of the model used.</td></tr>
+        <tr><th scope="row">Editable scene files</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">List the actual source files included in the project download.</td></tr>
+        <tr><th scope="row">Requested revision</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">Identify the actual request and verified before/after change.</td></tr>
+        <tr><th scope="row">Local video and audio render</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">Use measured MP4 metadata, successful decode result and the final file hash.</td></tr>
+        <tr><th scope="row">Bounded jobs and failure handling</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">Name the synthetic timeout, cancellation, privacy and failure cases that were actually tested.</td></tr>
+        <tr><th scope="row">Playback and sound review</th><td><span class="pending">Awaiting evidence</span></td><td class="detail">State what was watched and heard. Frame stills and stream detection alone do not establish this result.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section" aria-labelledby="frames-title">
+    <h2 id="frames-title">Frames from the rendered film</h2>
+    <p>Use the contact sheet to check the copy and composition. Play the MP4 above to judge pacing, transitions and sound.</p>
+    <figure class="figure"><a href="contact-sheet.jpg"><img src="contact-sheet.jpg" alt="Contact sheet pending: replace with labeled frames from the actual final render" loading="lazy"></a><figcaption>Awaiting the final rendered contact sheet and its frame timestamps.</figcaption></figure>
+  </section>
+  <section class="section grid" aria-labelledby="use-title">
+    <div><h2 id="use-title">Make the next cut.</h2><ol class="steps"><li>Open the editable project and the included usage guide.</li><li>Give Codex a concrete launch brief or revision.</li><li>Review the returned source, local render and test results.</li></ol></div>
+    <div><h3>What you need</h3><p>The plug-in is free. Claude access and local tools are required. Model access, subscriptions and API usage follow your own account and provider terms.</p><p>This is an independent local tool by <strong>@adamdesgns</strong>. Vendor names describe compatibility; they do not imply endorsement.</p></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span class="credit">Scene Relay · by @adamdesgns</span><span>Local preview. No publication or public-release approval is implied.</span></div></footer>
+</body>
+</html>

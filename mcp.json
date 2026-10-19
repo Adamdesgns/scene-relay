@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "scene_relay": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-u", "${PLUGIN_ROOT}/server/mcp_server.py", "--data-root", "${PLUGIN_DATA}/jobs"]
+    }
+  }
+}
